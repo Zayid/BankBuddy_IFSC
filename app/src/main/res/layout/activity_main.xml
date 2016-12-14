@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.whackyard.bankbuddy.MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.5">
+
+                    <TextView
+                        android:text="Bank Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:gravity="center"
+                        android:background="@color/text_bg"/>
+
+                    <TextView
+                        android:text="State Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:id="@+id/textView4"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:gravity="center"
+                        android:background="@color/text_bg"/>
+
+                    <TextView
+                        android:text="District Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:id="@+id/textView3"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:gravity="center"
+                        android:background="@color/text_bg"/>
+
+                    <TextView
+                        android:text="Branch Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:id="@+id/textView"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:gravity="center"
+                        android:background="@color/text_bg"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6.5">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:id="@+id/spBank"
+                        android:layout_marginTop="8dp"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/spState" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:id="@+id/spDistrict"
+                        android:layout_marginTop="7dp"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:id="@+id/spBranch"
+                        android:layout_marginTop="8dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <Button
+                android:text="Get!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnFindIfsc"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/cvIfsc"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_weight="8">
+
+                <TextView
+                    android:text="IFSC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView7"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimary"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvResultIfsc"
+                        android:layout_weight="1"
+                        android:textSize="24sp"
+                        android:textColor="@color/black"
+                        android:paddingTop="2dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/clipboard"
+                android:id="@+id/ibClipboard"
+                android:layout_weight="2"
+                android:scaleType="centerCrop"
+                android:background="@color/white"
+                android:padding="8dp" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
